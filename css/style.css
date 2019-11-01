@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    overlow-x: hidden;
+}
+
+.full-section {
+    height: 100vh;
+}
+
+.main-section {
+    background-image: url(../img/klawisze.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.letters-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 2px;
+    align-items: center;
+}
+
+div.key {
+    height: 30px;
+    width: 30px;
+    border: 1px white solid;
+        display: flex;
+        justify-content: center;
+    align-items: center;
+    margin: 3px;
+
+}
