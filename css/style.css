@@ -38,6 +38,7 @@ div.key {
     align-items: center;
     margin: 3px;
     transition: all 0.07s;
+    color: white;
 }
 
 div.playing {
@@ -45,4 +46,5 @@ transform: scale(1.2);
     border-color: orange;
     box-shadow: 0 0 10px orange;
 }
+
 

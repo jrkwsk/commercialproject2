@@ -19,60 +19,67 @@
     <section class="main-section full-section">
         <div class="letters-container">
             <div data-key=80 class="key">
-                <kbd>P</kbd>
+                P
             </div>
             <div data-key="65" class="key">
-                <kbd>A</kbd>
+                A
             </div>
             <div data-key="87" class="key">
-                <kbd>W</kbd>
+                W
             </div>
-            <div data-key="69" class="key" value="69" id="sjkvhkashgk">
-                <kbd>E</kbd>
-            </div>
-            <div data-key="65" class="key">
-                <kbd>L</kbd>
+            <div data-key="69" class="key" value="69" id="69">
+                E
             </div>
             <div data-key="65" class="key">
-                <kbd>J</kbd>
+                L
+            </div>
+            <div data-key="65" class="key">
+                J
             </div>
             <div data-key="69" class="key">
-                <kbd>E</kbd>
+                E
             </div>
             <div data-key="65" class="key">
-                <kbd>D</kbd>
+                D
             </div>
             <div data-key="65" class="key">
-                <kbd>R</kbd>
+                R
             </div>
             <div data-key="65" class="key">
-                <kbd>Z</kbd>
+                Z
             </div>
             <div data-key="69" class="key">
-                <kbd>E</kbd>
+                E
             </div>
             <div data-key="65" class="key">
-                <kbd>J</kbd>
+                J
             </div>
             <div data-key="69" class="key">
-                <kbd>E</kbd>
+                E
             </div>
             <div data-key="65" class="key">
-                <kbd>W</kbd>
+                W
             </div>
             <div data-key="65" class="key">
-                <kbd>S</kbd>
+                S
             </div>
             <div data-key="65" class="key">
-                <kbd>K</kbd>
+                K
             </div>
             <div data-key="65" class="key">
-                <kbd>I</kbd>
+                I
             </div>
         </div>
 
 
         <audio data-key="69" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav" type="audio/mpeg"></audio>
+        <audio data-key="80" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/mpeg"></audio>
+                <audio data-key="80" src="https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav" type="audio/mpeg"></audio>
+        <audio data-key="80" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/mpeg"></audio>
+        <audio data-key="80" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/mpeg"></audio>
+        <audio data-key="80" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/mpeg"></audio>
+        <audio data-key="80" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/mpeg"></audio>
+
 
 
 
@@ -81,40 +88,40 @@
     <section class="contact-section full-section">
 <div class="letters-container">
            <div data-key=80 class="key">
-                <kbd>T:</kbd>
+                T:
             </div>
             <div data-key=80 class="key">
-                <kbd>7</kbd>
+                7
             </div>
             <div data-key="65" class="key">
-                <kbd>8</kbd>
+                8
             </div>
             <div data-key="87" class="key">
-                <kbd>2</kbd>
+                2
             </div>
             <div data-key="69" class="key">
-                <kbd>-</kbd>
+                -
             </div>
             <div data-key="65" class="key">
-                <kbd>0</kbd>
+                0
             </div>
             <div data-key="65" class="key">
-                <kbd>6</kbd>
+                6
             </div>
             <div data-key="69" class="key">
-                <kbd>2</kbd>
+                2
             </div>
             <div data-key="65" class="key">
-                <kbd>-</kbd>
+                -
             </div>
             <div data-key="65" class="key">
-                <kbd>7</kbd>
+                7
             </div>
             <div data-key="65" class="key">
-                <kbd>1</kbd>
+                1
             </div>
             <div data-key="69" class="key">
-                <kbd>3</kbd>
+                3
             </div>
             
         </div>
@@ -144,10 +151,12 @@
         
         
         function playSoundclick (e) {  
-             event.preventDefault();
+            event.preventDefault();
             console.log(e);
-            const audio = document.querySelector(`audio[data-key="69"]`); //wybieramy dzwiek, ktory zagra
-            const key = document.querySelector(`.key[data-key="69"]`); //wybieramy grajacy klawisz do ostylowania 
+            const audio = document.querySelector(`audio[data-key="${e.target.id}"]`); //wybieramy dzwiek, ktory zagra
+            console.log(e.target.id);
+            console.log(audio);
+            const key = document.querySelector(`.key[data-key="${e.target.id}"]`); //wybieramy grajacy klawisz do ostylowania 
             if (!audio) return; //zatrzymuje funkcje 
             audio.currentTime = 0; //żeby można było grać kilka razy
             audio.play();
