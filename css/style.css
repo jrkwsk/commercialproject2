@@ -1,36 +1,48 @@
 body {
     margin: 0;
     padding: 0;
-    overlow-x: hidden;
+    overflow-x: hidden;
+    background-color: black;
+
 }
 
 .full-section {
     height: 100vh;
+    background-color: black;
 }
 
 .main-section {
     background-image: url(../img/klawisze.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 div.letters-container {
+    padding: 40vh 0;
     height: 100vh;
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
     justify-content: center;
-    margin: 2px;
+    margin: 3px;
     align-items: center;
 }
 
 div.key {
-    height: 30px;
-    width: 30px;
+    height: 32px;
+    width: 32px;
     border: 1px white solid;
         display: flex;
         justify-content: center;
     align-items: center;
     margin: 3px;
-
+    transition: all 0.07s;
 }
+
+div.playing {
+transform: scale(1.2);
+    border-color: orange;
+    box-shadow: 0 0 10px orange;
+}
+
