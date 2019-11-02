@@ -27,7 +27,7 @@
             <div data-key="87" class="key">
                 <kbd>W</kbd>
             </div>
-            <div data-key="69" class="key">
+            <div data-key="69" class="key" value="69" id="sjkvhkashgk">
                 <kbd>E</kbd>
             </div>
             <div data-key="65" class="key">
@@ -124,9 +124,7 @@
 
     <script>        
         function playSoundkey (e) {        
-            console.log(e.keyCode);
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //wybieramy dzwiek, ktory zagra
-            console.log(audio);
             const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //wybieramy grajacy klawisz do ostylowania 
             if (!audio) return; //zatrzymuje funkcje 
             audio.currentTime = 0; //żeby można było grać kilka razy
@@ -141,6 +139,34 @@
 
         const keys = document.querySelectorAll('.key');
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+        
+        
+        
+        
+        function playSoundclick (e) {  
+             event.preventDefault();
+            console.log(e);
+            const audio = document.querySelector(`audio[data-key="69"]`); //wybieramy dzwiek, ktory zagra
+            const key = document.querySelector(`.key[data-key="69"]`); //wybieramy grajacy klawisz do ostylowania 
+            if (!audio) return; //zatrzymuje funkcje 
+            audio.currentTime = 0; //żeby można było grać kilka razy
+            audio.play();
+            key.classList.add('playing');
+        };
+
+        function removeTransition(e) {
+            if (e.propertyName !== 'transform') return; //funkcja kończy animację po transform, ale najpier sprawdza elementy, które miały animację 
+            this.classList.remove('playing');
+        }
+
+        const clicks = document.querySelectorAll('.key');
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+        
+        
+        
+        
+        
+        
         
         window.addEventListener('keydown', playSoundkey);
         window.addEventListener('click', playSoundclick); // to do
