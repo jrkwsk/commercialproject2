@@ -74,74 +74,74 @@
 
         <audio data-key="69" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav" type="audio/mpeg"></audio>
         <audio data-key="80" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/mpeg"></audio>
-                <audio data-key="80" src="https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav" type="audio/mpeg"></audio>
+        <audio data-key="80" src="https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav" type="audio/mpeg"></audio>
         <audio data-key="65" src="https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand3.wav" type="audio/mpeg"></audio>
         <audio data-key="74" src="https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand60.wav" type="audio/mpeg"></audio>
         <audio data-key="64" src="https://www2.cs.uic.edu/~i101/SoundFiles/Fanfare60.wav" type="audio/mpeg"></audio>
         <audio data-key="73" src="https://www2.cs.uic.edu/~i101/SoundFiles/gettysburg10.wav" type="audio/mpeg"></audio>
         <audio data-key="76" src="https://www2.cs.uic.edu/~i101/SoundFiles/gettysburg.wav" type="audio/mpeg"></audio>
         <audio data-key="75" src="https://www2.cs.uic.edu/~i101/SoundFiles/ImperialMarch60.wav" type="audio/mpeg"></audio>
-        <audio data-key="83" src="https://www2.cs.uic.edu/~i101/SoundFiles/inkPanther30.wav" type="audio/mpeg"></audio>
+        <audio data-key="83" src="https://www2.cs.uic.edu/~i101/SoundFiles/PinkPanther30.wav" type="audio/mpeg"></audio>
         <audio data-key="87" src="https://www2.cs.uic.edu/~i101/SoundFiles/PinkPanther60.wav" type="audio/mpeg"></audio>
         <audio data-key="82" src="https://www2.cs.uic.edu/~i101/SoundFiles/preamble10.wav" type="audio/mpeg"></audio>
         <audio data-key="087" src="https://www2.cs.uic.edu/~i101/SoundFiles/preamble.wav" type="audio/mpeg"></audio>
         <audio data-key="0069" src="https://www2.cs.uic.edu/~i101/SoundFiles/taunt.wav" type="audio/mpeg"></audio>
-
-
+        <audio data-key="68" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav" type="audio/mpeg"></audio>
+        <audio data-key="90" src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav" type="audio/mpeg"></audio>
     </section>
 
     <section class="contact-section full-section">
-<div class="letters-container">
-           <div data-key=80 class="key">
-                T:
+        <div class="contact-container half-section">
+            <div class="key">
+                K
             </div>
-            <div data-key=80 class="key">
-                7
+            <div class="key">
+                O
             </div>
-            <div data-key="65" class="key">
-                8
+            <div class="key">
+                N
             </div>
-            <div data-key="87" class="key">
-                2
+            <div class="key">
+                T
             </div>
-            <div data-key="69" class="key">
-                -
+            <div class="key">
+                A
             </div>
-            <div data-key="65" class="key">
-                0
+            <div class="key">
+                K
             </div>
-            <div data-key="65" class="key">
-                6
+            <div class="key">
+                T
             </div>
-            <div data-key="69" class="key">
-                2
+        </div>
+        <div class="contact-container2 half-section">
+
+            <div class="key2">
+                782-062-713
             </div>
-            <div data-key="65" class="key">
-                -
+            <div class="key2">
+                 / / / 
             </div>
-            <div data-key="65" class="key">
-                7
+            <div class="key2">
+                pawel.jedrzejewski@vp.pl
             </div>
-            <div data-key="65" class="key">
-                1
-            </div>
-            <div data-key="69" class="key">
-                3
-            </div>
-            
+
         </div>
     </section>
 
 
 
-    <script>        
-        function playSoundkey (e) {        
+    <script>
+        function playSoundkey(e) {
+
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //wybieramy dzwiek, ktory zagra
-            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //wybieramy grajacy klawisz do ostylowania 
+
+            const key = document.querySelectorAll(`.key[data-key="${e.keyCode}"]`); //wybieramy grajacy klawisz do ostylowania (All powoduje, że wybieramy wszystkie elementy)
             if (!audio) return; //zatrzymuje funkcje 
             audio.currentTime = 0; //żeby można było grać kilka razy
             audio.play();
-            key.classList.add('playing');
+            //            key.classList.add('playing'); działa gdy kżdy guzik inny 
+            key.forEach(key => key.classList.add('playing'));
         };
 
         function removeTransition(e) {
@@ -149,23 +149,28 @@
             this.classList.remove('playing');
         }
 
+
         const keys = document.querySelectorAll('.key');
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-        
-        
-        
-        
-        function playSoundclick (e) {  
+
+
+
+
+        function playSoundclick(e) {
             event.preventDefault();
-            console.log(e);
-            const audio = document.querySelector(`audio[data-key="${e.target.id}"]`); //wybieramy dzwiek, ktory zagra
-            console.log(e.target.id);
-            console.log(audio);
-            const key = document.querySelector(`.key[data-key="${e.target.id}"]`); //wybieramy grajacy klawisz do ostylowania 
+            const audio = document.querySelector(`audio[data-key="${e.target.getAttribute("data-key")}"]`); //wybieramy dzwiek, ktory zagra     
+            const key = document.querySelectorAll(`.key[data-key="${e.target.getAttribute("data-key")}"]`); //wybieramy grajacy klawisz do ostylowania 
             if (!audio) return; //zatrzymuje funkcje 
+
+            let clicked = e.target.getAttribute("data-key");
+            console.log("klikniety:", clicked);
+
             audio.currentTime = 0; //żeby można było grać kilka razy
             audio.play();
-            key.classList.add('playing');
+            //            key.classList.add('playing'); to działa            
+            key.forEach(key => key.classList.add('playing'));
+
+
         };
 
         function removeTransition(e) {
@@ -175,17 +180,10 @@
 
         const clicks = document.querySelectorAll('.key');
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-        
-        
-        
-        
-        
-        
-        
-        window.addEventListener('keydown', playSoundkey);
-        window.addEventListener('click', playSoundclick); // to do
 
-        
+
+        window.addEventListener('keydown', playSoundkey);
+        window.addEventListener('click', playSoundclick);
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
