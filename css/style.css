@@ -20,11 +20,11 @@ body {
     height:auto;
     padding-left: 20vw;
     padding-right: 20vw;
-    color:lightblue;
+    color:white;
     padding-top: 10vh;
     padding-bottom: 10vh;
     text-align: justify;
-    line-height: 1.5;
+    line-height: 1.8;
     font-family: 'Lato', sans-serif;
 
 
@@ -32,10 +32,16 @@ body {
 
 
 .main-section {
-    background-image: url(../img/klawisze.jpg);
+    background-image: url(../img/klawisze3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.contact-section {
+text-align: center;
+    color: white;
+    padding-top: 20vh;
 }
 
 div.letters-container {
@@ -52,13 +58,13 @@ div.letters-container {
 div.key {
     height: 32px;
     width: 32px;
-    border: 1px lightblue solid;
+/*    border: 1px white solid;*/
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 3px;
     transition: all 0.07s;
-    color: lightblue;
+    color: #00dbff;
     font-weight: 800;
     cursor: pointer;
     background-color: rgba(0,0,0,0.5);
@@ -91,6 +97,32 @@ div.key2 {
 
 div.playing {
     transform: scale(1.2);
-    border-color: orange;
-    box-shadow: 0 0 10px orange;
+    border-color: #ffff00;
+    box-shadow: 0 0 10px #ffff00;
+}
+
+span {
+    color: #ffff00;
+    font-family: 'Lato', sans-serif;
+
+}
+
+span.pink {
+    color: #ff06ff;
+}
+
+span.blue {
+    color: #00dbff;
+}
+
+span.dblue {
+    color: #0000e6;
+}
+
+span.green {
+    color: #26fc04;
+}
+
+span.dgreen {
+    color: #007b00;
 }
