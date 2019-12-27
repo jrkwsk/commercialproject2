@@ -8,17 +8,60 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Fredericka+the+Great|Monoton&display=swap" rel="stylesheet">
+
     <!-- Other CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/ad2760bdc5.js" crossorigin="anonymous"></script>
 
 
     <title>Paweł Jędrzejewski Piano Artist</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-light fixed-top navbar-expand-md navbar-no-bg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-ellipsis-h"></i></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <div class="card m-1">
+                        <div class="card-body">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#bio">BIO</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="card m-1">
+                        <div class="card-body">
+                            <li class="nav-item">
+                                <a class="nav-link scroll-link" href="#music">MUZYKA</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="card m-1">
+                        <div class="card-body">
+                            <li class="nav-item">
+                                <a class="nav-link scroll-link" href="#footer">KONTAKT</a>
+                            </li>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a class="text-secondary d-inline-block pt-4 mt-2 ml-3 px-2" href="https://www.instagram.com/pawel_czyli_jedrzej/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="text-secondary d-inline-block pt-4 mt-2 px-2" href="https://www.youtube.com/user/paulPoland?fbclid=IwAR3hBxXLP0wOaYNwIV1lvOJz_SSnb-SfnJucbAmzlXjht_8pLrob7AH6f14" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <section class="main-section full-section">
-        <div class="letters-container">
+        <div class="letters-container" id="keysOnly">
             <div data-key=80 class="key" id="firstLetter">
                 P
             </div>
@@ -68,59 +111,130 @@
                 K
             </div>
             <div data-key="73" class="key" id="73">
-                I
-            </div>
+                I </div>
         </div>
-
 
         <audio data-key="69" src="sounds/akord1.wav" type="audio/mpeg"></audio>
         <audio data-key="80" src="sounds/dzwiek1.wav" type="audio/mpeg"></audio>
-    
         <audio data-key="65" src="sounds/dzwiek2.wav" type="audio/mpeg"></audio>
-        
         <audio data-key="74" src="sounds/akord2.wav" type="audio/mpeg"></audio>
-        
         <audio data-key="73" src="sounds/dzwiek3.wav" type="audio/mpeg"></audio>
-        
         <audio data-key="76" src="sounds/dzwiek4.wav" type="audio/mpeg"></audio>
-        
         <audio data-key="75" src="sounds/dzwiek1.wav" type="audio/mpeg"></audio>
         <audio data-key="83" src="sounds/dzwiek2.wav" type="audio/mpeg"></audio>
         <audio data-key="87" src="sounds/akord3.wav" type="audio/mpeg"></audio>
         <audio data-key="82" src="sounds/dzwiek3.wav" type="audio/mpeg"></audio>
-       
-       <audio data-key="68" src="sounds/dzwiek4.wav" type="audio/mpeg"></audio>
+        <audio data-key="68" src="sounds/dzwiek4.wav" type="audio/mpeg"></audio>
         <audio data-key="90" src="sounds/dzwiek1.wav" type="audio/mpeg"></audio>
+
     </section>
-    
+
     <section class="desc-section auto-section">
-        <p><strong>Paweł Jędrzejewski</strong> (ur. 1986) - pianista, klawiszowiec, kompozytor. Od 6. roku życia uczył się pod kierunkiem dziadka Henryka Jędrzejewskiego, od 14. roku życia jest zasadniczo muzycznym samoukiem. Korzystał i korzysta z konsultacji muzycznych według swoich potrzeb i zainteresowań, m.in. u Aleksandra Dębicza (fortepian klasyczny), Wojciecha Niedzieli i Włodka Pawlika (<span class="blue">jazz</span>), Marcina Partyki (kompozycja). 
-        <br><br>
-Wraz z autorskim zespołem jazzowym 4Way Quartet wydał płytę "Weltschmerz is over" (2019, wyd. Karrot), natomiast z electro-soulowym The Cookies wydał płytę "Push Rewind" (2015, wyd. MJM).
-<br><br>
+        <h3 class="pb-5" id="bio">BIO <span class="blue">:</span></h3>
 
-Od ponad pięciu lat pracuje w zespole Dawida Kwiatkowskiego jako instrumentalista i kompozytor (m.in. osiem tras koncertowych po Polsce, platynowa płyta "Pop <span class="pink">&</span> Roll"). 
-<br><br>
-
-            Koncertuje i nagrywa także jako muzyk sesyjny, ma w swoim dorobku występy m.in. z Muńkiem Staszczykiem, Tymonem Tymańskim, Natalią <span class="green">Natu </span>Przybysz, Natalią Niemen, Mariką oraz Wojciechem Kordą w ramach projektu Klenczon Legenda, z Krzysztofem Cugowskim, Jackiem Wójcickim, Andrzejem Krzywym w programie TVP1 Świat się kręci, z Derrickiem McKenzie <span>(</span>perkusista Jamiroquai<span>)</span>, z Marysią Sadowską, Krzysztofem Jarym Jaryczewskim (Oddział Zamknięty), z Mają Kleszcz i jej zespołem Incarnations, ze Sławkiem Uniatowskim, z aktorką musicalową Edytą Krzemień, z Paweł Kowalczyk Big Band, z plejadą polskich gwiazd country podczas Festiwalu Mrągowo 2016.
-<br><br>
-            Współpracował z Teatrem Baza (skomponował muzykę do spektaklów „Czarnoksiężnik z Krainy Oz” oraz <span class="dblue">„</span>Koklusz<span class="dblue">”</span> w reżyserii Tomasza Zadróżnego), z Teatrem Dramatycznym (członek orkiestry w spektaklu Księżniczka Turandot) oraz Teatrem Druga Strefa (akompaniator w spektaklu Nocleg w Apeninach).
-<br><br>
-            Występuje równie<span class="dgreen">ż</span> z programem na fortepian solo<span class="blue"> - </span> wykonując znane piosenki z kręgu muzyki filmowej, popowej i jazzowej we własnych aranżacjach, wybrane utwory muzyki poważnej i kilka własnych kompozycji.</p>
+        <p><strong>Paweł Jędrzejewski</strong> (ur. 1986) - pianista, klawiszowiec, kompozytor. Od 6. roku życia uczył się pod kierunkiem dziadka Henryka Jędrzejewskiego, od 14. roku życia jest zasadniczo muzycznym samoukiem. Korzystał i korzysta z konsultacji muzycznych według swoich potrzeb i zainteresowań, m.in. u Aleksandra Dębicza (fortepian klasyczny), Wojciecha Niedzieli i Włodka Pawlika (<span class="blue">jazz</span>), Marcina Partyki (kompozycja).
+            <br><br> Wraz z autorskim zespołem jazzowym 4Way Quartet wydał płytę "Weltschmerz is over" (2019, wyd. Karrot), natomiast z electro-soulowym The Cookies wydał płytę "Push Rewind" (2015, wyd. MJM).
+            <br><br> Od ponad pięciu lat pracuje w zespole Dawida Kwiatkowskiego jako instrumentalista i kompozytor (m.in. osiem tras koncertowych po Polsce, platynowa płyta "Pop <span class="pink">&</span> Roll").
+            <br><br> Koncertuje i nagrywa także jako muzyk sesyjny, ma w swoim dorobku występy m.in. z Muńkiem Staszczykiem, Tymonem Tymańskim, Natalią <span class="green">Natu </span>Przybysz, Natalią Niemen, Mariką oraz Wojciechem Kordą w ramach projektu Klenczon Legenda, z Krzysztofem Cugowskim, Jackiem Wójcickim, Andrzejem Krzywym w programie TVP1 Świat się kręci, z Derrickiem McKenzie <span>(</span>perkusista Jamiroquai<span>)</span>, z Marysią Sadowską, Krzysztofem Jarym Jaryczewskim (Oddział Zamknięty), z Mają Kleszcz i jej zespołem Incarnations, ze Sławkiem Uniatowskim, z aktorką musicalową Edytą Krzemień, z Paweł Kowalczyk Big Band, z plejadą polskich gwiazd country podczas Festiwalu Mrągowo 2016.
+            <br><br> Współpracował z Teatrem Baza (skomponował muzykę do spektaklów „Czarnoksiężnik z Krainy Oz” oraz <span class="dblue">„</span>Koklusz<span class="dblue">”</span> w reżyserii Tomasza Zadróżnego), z Teatrem Dramatycznym (członek orkiestry w spektaklu Księżniczka Turandot) oraz Teatrem Druga Strefa (akompaniator w spektaklu Nocleg w Apeninach).
+            <br><br> Występuje równie<span class="dgreen">ż</span> z programem na fortepian solo<span class="blue"> - </span> wykonując znane piosenki z kręgu muzyki filmowej, popowej i jazzowej we własnych aranżacjach, wybrane utwory muzyki poważnej i kilka własnych kompozycji.</p>
     </section>
 
-    <section class="contact-section half-section">
-        
-        <div>
-        <h3>KONTAKT <span>:</span></h3>
-        <br>
-<p>pawel.jedrzejewski@vp.pl</p>
-            <p>782<span class="pink"> - </span>062<span class="dgreen"> - </span>713</p>
+    <section class="auto-section">
+        <h3 class="pb-5" id="music">MUZYKA <span class="pink">:</span></h3>
+
+
+        <div id="carouselFadeExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hByzhWcHHEw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/opNI0ajtQVw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pQ1Y8DLzhUs?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yeeFfbFUEVM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MOfXJzdGP_Q?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselFadeExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselFadeExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="text-center pt-5">
+            <p>WIĘCEJ <span class="dgreen">:</span></p>
+            <a href="https://www.youtube.com/user/paulPoland?fbclid=IwAR3hBxXLP0wOaYNwIV1lvOJz_SSnb-SfnJucbAmzlXjht_8pLrob7AH6f14" target="_blank"><i class="fab fa-youtube 9x" style="font-size: 3rem;"></i></a>
         </div>
     </section>
 
+    <section class="contact-section auto-section">
 
+        <div class="pb-5 mb-5">
+            <h3 class="pb-5" id="footer">KONTAKT <span>:</span></h3>
+            <br>
+            <p>pawel.jedrzejewski@vp.pl</p>
+            <p>782<span class="pink"> - </span>062<span class="dgreen"> - </span>713</p>
+            <a class="text-secondary d-inline-block pt-4 mt-2 px-2" href="https://www.instagram.com/pawel_czyli_jedrzej/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="text-secondary d-inline-block pt-4 mt-2 px-2" href="https://www.youtube.com/user/paulPoland?fbclid=IwAR3hBxXLP0wOaYNwIV1lvOJz_SSnb-SfnJucbAmzlXjht_8pLrob7AH6f14" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+<!--cookies start-->
 
+    <div id="simplecookienotification_v01" style="display: block; z-index: 99999; min-height: 35px; width: 100%; position: fixed; background: rgb(0, 0, 0);  text-align: center; right: 0px; color: rgb(119, 119, 119); bottom: 0px; left: 0px; border-top: dotted white 1px;">
+        <div style="padding:10px; margin-left:15px; margin-right:15px; font-size:14px; font-weight:normal;">
+            
+            <span id="simplecookienotification_v01_powiadomienie">Strona wykorzystuje technologię cookies. Pozostając na niej, wyrażasz na to zgodę. </span><span id="br_pc_title_html"><br></span>
+
+            <a id="okbutton" href="javascript:simplecookienotification_v01_create_cookie('simplecookienotification_v01',1,7);" style="position: absolute; background: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 5px 15px; text-decoration: none; font-size: 12px; font-weight: normal; border: 1px solid rgb(255, 255, 255); border-radius: 0px; top: 5px; right: 5px;">Rozumiem!</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var galTable = new Array();
+        var galx = 0;
+    </script>
+    <script type="text/javascript">
+        function simplecookienotification_v01_create_cookie(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            } else var expires = "";
+            document.cookie = name + "=" + value + expires + "; path=/";
+            document.getElementById("simplecookienotification_v01").style.display = "none";
+        }
+
+        function simplecookienotification_v01_read_cookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(";");
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == " ") c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        var simplecookienotification_v01_jest = simplecookienotification_v01_read_cookie("simplecookienotification_v01");
+        if (simplecookienotification_v01_jest == 1) {
+            document.getElementById("simplecookienotification_v01").style.display = "none";
+        }
+    </script>
+    <!--        cookies end-->
+    
     <script>
         function playSoundkey(e) {
 
@@ -151,15 +265,13 @@ Od ponad pięciu lat pracuje w zespole Dawida Kwiatkowskiego jako instrumentalis
             const key = document.querySelectorAll(`.key[data-key="${e.target.getAttribute("data-key")}"]`); //wybieramy grajacy klawisz do ostylowania 
             if (!audio) return; //zatrzymuje funkcje 
 
-//            let clicked = e.target.getAttribute("data-key");
-//            console.log("klikniety:", clicked);
+            //            let clicked = e.target.getAttribute("data-key");
+            //            console.log("klikniety:", clicked);
 
             audio.currentTime = 0; //żeby można było grać kilka razy
             audio.play();
             //            key.classList.add('playing'); to działa            
             key.forEach(key => key.classList.add('playing'));
-
-
         };
 
         function removeTransition(e) {
@@ -169,22 +281,18 @@ Od ponad pięciu lat pracuje w zespole Dawida Kwiatkowskiego jako instrumentalis
 
         const clicks = document.querySelectorAll('.key');
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-        
-        
-        
+
         window.addEventListener('keydown', playSoundkey);
-        window.addEventListener('click', playSoundclick);
+        const keysOnly = document.getElementById('keysOnly');
+        keysOnly.addEventListener('click', playSoundclick);
         window.addEventListener('mouseover', playSoundclick);
-
-
-        
-        
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

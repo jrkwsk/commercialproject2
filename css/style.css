@@ -26,8 +26,6 @@ body {
     text-align: justify;
     line-height: 1.8;
     font-family: 'Lato', sans-serif;
-
-
 }
 
 
@@ -36,12 +34,16 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
 .contact-section {
 text-align: center;
     color: white;
     padding-top: 20vh;
+    border: dotted white 0.5px;
+    margin: 8vw;
+    border-radius: 5px;
 }
 
 div.letters-container {
@@ -53,6 +55,8 @@ div.letters-container {
     justify-content: center;
     margin: 3px;
     align-items: center;
+    font-family: 'Monoton', cursive;
+    font-size: 2rem;
 }
 
 div.key {
@@ -65,10 +69,10 @@ div.key {
     margin: 3px;
     transition: all 0.07s;
     color: #00dbff;
-    font-weight: 800;
     cursor: pointer;
     background-color: rgba(0,0,0,0.5);
-}
+    border-radius: 5px;
+    }
 
 div.contact-container {
     display: flex;
@@ -84,6 +88,8 @@ div.contact-container2 {
 /*    flex-direction: column;*/
 /*    flex-flow: row wrap;*/
     justify-content: center;
+        border: dotted white 1px;
+
 /*
     margin: 3px;
     align-items:flex-start;
@@ -125,4 +131,23 @@ span.green {
 
 span.dgreen {
     color: #007b00;
+}
+
+i {
+    color: #ffff00;
+}
+
+div.card {
+    background-color: black;
+    border: solid #ffff00 0.5px;
+    border-style: dotted;
+}
+
+#navbarNav > ul > div> div > li > a {
+        color: white;
+}
+
+h3 {
+        font-family: 'Monoton', cursive;
+
 }
